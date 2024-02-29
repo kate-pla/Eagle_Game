@@ -59,6 +59,7 @@ eagle_name = input("Eagle Name: ")
 for i in range(1,6):
     print(f"You are in round {i}/25")
     print(f"You have an energy level of {energy}")
+    print(f"You are currently a coordinate{x1},{y1}")
     #Asking the user if they want to fly or rest
     user_input = input("Would you like to rest or fly: ")
     user_input = user_input.lower()
@@ -75,12 +76,16 @@ for i in range(1,6):
         #User inputs where they want to fly 
         coordinate = input("Enter the coordiante you would like to fly to x,y: ")
         coordinate = coordinate.split(",")
-        #Users inputs what Speed they want to go 
-        speed =input("Enter the speed you would like to go (1-10):")
-        speed = int(speed)
         #Get the two coordinates 
         x2 = int(coordinate[0])
         y2 = int(coordinate[1])
+        #Checks if the coordiantes are valid
+        if x2 <-100 or x2 >100 or y2 <-100 or y2 >100:
+            print("invalid coordinate")
+            coordinate = input("Enter the coordiante you would like to fly to x,y: ")
+        #Users inputs what Speed they want to go 
+        speed =input("Enter the speed you would like to go (1-10):")
+        speed = int(speed)
         #Adds the energy of the resource 
         if x2 == xr and y2 == yr:
             energy = energy + add_energy
