@@ -101,8 +101,9 @@ for i in range(1,6):
         total_time += round(time)
     elif(user_input.lower() == "rest"):
         rest = input("How many hours do you want to rest(1-10)")
+        #Adds the energy to Eagle after resting 
         rest = int(rest)
-        energy = energy +rest
+        energy = Eagle.calcualte_rest(energy,rest)
         total_time += rest
     if energy <=0:
         print("You lose!")
