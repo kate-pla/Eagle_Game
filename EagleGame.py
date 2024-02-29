@@ -59,7 +59,7 @@ eagle_name = input("Eagle Name: ")
 for i in range(1,6):
     print(f"You are in round {i}/25")
     print(f"You have an energy level of {energy}")
-    print(f"You are currently a coordinate{x1},{y1}")
+    print(f"You are currently a coordinate {x1},{y1}")
     #Asking the user if they want to fly or rest
     user_input = input("Would you like to rest or fly: ")
     user_input = user_input.lower()
